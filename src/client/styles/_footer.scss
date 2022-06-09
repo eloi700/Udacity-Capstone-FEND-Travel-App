@@ -1,0 +1,50 @@
+@import "reset";
+
+#info-footer {
+  position: fixed;
+  height: 13rem;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  background: $thi-color;
+  border-radius: 2rem 2rem 0 0;
+}
+
+.social {
+  position: relative;
+  text-align: center;
+  padding: 2rem 0 0 0;
+
+  & > a {
+    font-size: 2.8rem;
+    width: 4rem;
+    height: 4rem;
+    line-height: 1.9;
+    display: inline-block;
+    text-align: center;
+    border-radius: 0.5rem;
+    border: 0.1rem solid $pri-color;
+    margin: 0 0.3rem;
+    transition: 0.3s ease-in-out;
+  }
+
+  & > a:hover {
+    transform: scale(0.9) rotate(360deg);
+    border-radius: 50%;
+  }
+}
+
+ion-icon {
+  pointer-events: none;
+  color: $sec-color;
+}
+
+.designed, .copyright {
+  padding-top: 0.8rem;
+  text-align: center;
+  font-size: 2rem;
+  font-family: "Road Rage", cursive;
+  color: $sec-m-color;
+  letter-spacing: 0.2rem;
+  font-weight: 100;
+}

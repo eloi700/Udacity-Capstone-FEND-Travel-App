@@ -1,0 +1,13 @@
+@import 'reset', 'header', 'form', 'footer';
+
+body {
+  @include center;
+  flex-direction: column;
+  background: $overlay-color;
+  background-image: url("https://source.unsplash.com/UmV2wr-Vbq8");
+  background-blend-mode: overlay;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+}

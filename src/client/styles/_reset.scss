@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
+*,
+::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root,
+html {
+  font-size: 62.5%;
+  font-family: 'Indie Flower', cursive;
+}
+
+@mixin center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+$pri-color: #FFD700;
+$sec-color: #fff;
+$sec-m-color: #aaa;
+$thi-color: #400;
+$overlay-color: rgba(255, 217, 1, 0.3);
+$sup-color: #000;
+
+ol,
+ul {
+  list-style: none;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  outline: none;
+}
