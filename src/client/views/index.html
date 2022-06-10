@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather-Journal App</title>
     <!-- <link rel="stylesheet" href="main.css" /> -->
-    <link rel="stylesheet" href="/up/css/main.css">
+    <link rel="stylesheet" href="/up/css/main.css" />
 
     <!-- font link -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -28,81 +28,77 @@
       <div class="logo-name">walkabout</div>
     </header>
 
-    <!-- App Form -->
-    <main id="app-form">
-      <h1 class="title">Personal Travel Planner</h1>
-      <form class="search-form">
-
-        <h3 class="title-name">Location (City, Country)</h2>
+    <!-- Trip Question Form -->
+    <main>
+      <h1 class="title-form">Travel Planner</h1>
+      <form id="search-form">
+        <h3 class="title-name">Location (City, Country)</h3>
         <div class="destination">
-          <label for="to-location"></label>
-          <input type="text" id="to-location" placeholder="Trip to:" />
+          <label for="to-location" class="to-location"></label>
+          <input type="text" id="to-location" placeholder="Trip to:" required/>
         </div>
-
-        <h3 class="title-name">Date (Departure & Return)</h2>
+        <h3 class="title-name">Date (Departure)</h3>
         <div class="date">
           <label for="start-date"></label>
-          <input type="date" id="start-date" />
+          <input
+            type="text"
+            id="start-date"
+            placeholder="dd-mm-yyyy"
+            onfocus="(this.type='date')"
+            onblur="if(this.value=='')(this.type='text')" required
+          />
         </div>
+        <h3 class="title-name">Date (Return)</h3>
         <div class="date">
           <label for="end-date"></label>
-          <input type="date" id="end-date" />
+          <input
+            type="text"
+            id="end-date"
+            placeholder="dd-mm-yyyy"
+            onfocus="(this.type='date')"
+            onblur="if(this.value=='')(this.type='text')" required
+          />
         </div>
-
         <button id="search" type="submit">Search</button>
       </form>
 
-      <!-- Trip Result / Details -->
-      <div class="trip-info">
-        <div class="trip-info-container">
-          <div class="loc-image"></div>
-          <div class="trip-details">
-            <p class="depart-loc">From: <span class="loc-depart"></span></p>
+    <!-- Trip Info / Details -->
+    <!-- <div id="travel-info"> -->
+    <!-- Location Image -->
+    <!-- <div class="location-img-pixabay">
+          <img class = "loc-img" src="https://source.unsplash.com/0E9r6zCVGiU" alt="Destination Image" />
+        </div> -->
+    <!-- Location, date, weather etc. details -->
+    <!-- <div id="travel-text-details">
+          <div class="info text-header">
+            <h3 class="txt-title trip-to">
+              You're travelling to: <span class="mark-style" id="city-place">Cologne</span>
+            </h3>
+            <h3 class="txt-title arrival-date">
+              You'll arrive on: <span class="mark-style" id="arrival-date">DD/MM/YYYY</span>
+            </h3>
           </div>
-          <h4 class="trip-detail">You're travelling to <span class="loc-info name"></span></h4>
-          <h4 class="trip-detail">You'll depart from <span class="loc-info depart"></span></h4>
-          <button class="save">save trip</button>
-          <h4 class="mt-0">Return: <span class="media_heading"></span></h4>
-          <h4 class="mt-0">Duration: <span class="media_heading"></span></h4>
-          <span class="trip_countdown"></span>
-          <span class="trip_weather"></span>
-
-
+          <div class="info buttons">
+            <a href="" class="save trip-button">save</a>
+            <a href="" class="delete trip-button">delete</a>
+          </div>
+          <div class =" info countdown-n-weather">
+            <p class="trip-countdown">
+              The place you're travelling to is<span class="mark-style" id="days">15 </span>days away
+            </p>
+            <p class="weather-forecast">
+              Weather Forecast: <span class="mark-style" id="temp">85</span> &#176; F
+            </p>
+            <p class="weather-forecast-words">
+              and <span class="mark-style" id="weather-words"> Cloudy </span>throughout the day.
+            </p>
+          </div>
         </div>
       </div>
+    </main> -->
 
-          <div class="card_modal">
-            <div class="container-fluid">
-              <div class="media row">
-                <img src="" class="images mr-3 col-12 col-lg-5" alt="Popular Images from Trip Location">
-                <div class="media-body col-12 col-lg-7">
-                  <h4 class="mt-0">Trip to: <span class="media_heading"></span></h4>
-                  <h6 class="mt-0">Departure: <span class="media_heading"></span></h6>
-                  <h6 class="mt-0">Return: <span class="media_heading"></span></h6>
-                  <h6 class="mt-0">Duration: <span class="media_heading"></span></h6>
-                  <span class="trip_countdown"></span>
-                  <span class="trip_weather"></span>
-                </div>
-              </div>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary trip_cancel">Close</button>
-              <button type="button" class="btn btn-primary trip_save">Save</button>
-            </div>
-          </div>
-
-    <!--footer area-->
-    <footer id = "info-footer">
-      <!-- <p>Optimized for Google Chrome browser</p>
-      <a href="https://www.linkedin.com/in/ma-cielo-tennert-7b345412a/">
-        <img
-          title="LinkedIn"
-          alt="LI"
-          src="https://github.com/MartinSchuhmacher/udacity-final-travel-app/blob/main/src/client/media/linkedin.jpg?raw=true"
-          class="linkedin-link"
-        />
-      </a> -->
-
+    <!--Footer area-->
+    <footer id="info-footer">
       <div class="social">
         <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
         <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
@@ -114,20 +110,22 @@
     </footer>
 
     <!-- Footer icons -->
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
 
-    <!--adding Service Workers for supported browsers-->
+    <!--Service workers Using Load event to keep the page load performant-->
     <script>
-      // Check that service workers are supported
       if ("serviceWorker" in navigator) {
-        // Use the window load event to keep the page load performant
         window.addEventListener("load", () => {
           navigator.serviceWorker.register("/service-worker.js");
         });
       }
     </script>
-
-    <!-- <script src="app.js" type="text/javascript"></script> -->
   </body>
 </html>

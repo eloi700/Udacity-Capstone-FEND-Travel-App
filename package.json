@@ -13,7 +13,7 @@
   "keywords": [],
   "author": "Ma. Cielo Tennert",
   "license": "ISC",
-  "description": "capstone project from udacity - travel app",
+  "description": "Travel App Planner that displays desired date of travel, location as well as its countries' image and weather condition retrieve from API.",
   "devDependencies": {
     "@babel/core": "^7.17.12",
     "@babel/plugin-transform-modules-commonjs": "^7.17.9",

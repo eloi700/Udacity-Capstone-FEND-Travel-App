@@ -1,6 +1,7 @@
-@import 'reset', 'header', 'form', 'footer';
+@import 'reset', 'header', 'form-q', 'footer';
 
 body {
+  position: relative;
   @include center;
   flex-direction: column;
   background: $overlay-color;
@@ -10,4 +11,12 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 100vh;
+}
+
+// Responsive view on bigger screen
+@media screen and (min-width: 800px) {
+  .landing__container {
+    max-width: 80%;
+    padding: 1rem;
+  }
 }

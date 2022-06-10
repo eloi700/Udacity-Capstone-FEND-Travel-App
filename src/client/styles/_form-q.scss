@@ -1,0 +1,183 @@
+@import "reset";
+
+.title-form {
+  position: relative;
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
+  color: $sec-color;
+  padding: 0.8rem;
+  text-shadow: 0 0 0.3rem rgba(0, 0, 0, 0.5);
+  text-decoration: underline $pri-color 0.8rem;
+}
+
+#search-form,
+#travel-info {
+  position: relative;
+  @include center;
+  flex-direction: column;
+  height: 38rem;
+  width: 30rem;
+  background: $form-bg-color;
+  box-shadow: 0 0 0.3rem rgba(0, 0, 0, 0.3);
+}
+
+#search-form{
+  border: 0.1rem solid $pri-color;
+}
+
+.info {
+  padding: 0.5rem;
+  color: $grey;
+  font-size: 1.5rem;
+}
+
+.location-img-pixabay {
+  position: absolute;
+  top: 1rem;
+  bottom: 0;
+  width: auto;
+  height: 16rem;
+  border-radius: 0.5rem 0 0.5rem 0;
+
+  &::before {
+    position: absolute;
+    content: "";
+    border-radius: 0.5rem;
+    border: 0.3rem solid $pri-color;
+    height: 16rem;
+    width: 28rem;
+    transform: rotate(-3deg);
+  }
+}
+
+.loc-img {
+  top: 0;
+  width: 28rem;
+  margin: auto;
+  object-fit: cover;
+  border-radius: 1rem;
+  border-radius: 0.5rem;
+  transform: scale(0.95) rotate(1deg);
+  transition: 0.5s ease-in-out;
+
+  &:hover {
+    transform: scale(0.88);
+  }
+}
+
+#travel-text-details {
+  position: absolute;
+  top: 17rem;
+  text-align: center;
+}
+
+.txt-title,
+p {
+  font-size: 1.5rem;
+  padding: 0.5rem 0;
+  font-weight: 500;
+}
+
+.mark-style {
+  position: relative;
+  left: 0.3rem;
+  word-spacing: 0.5rem;
+  font-weight: 800;
+  color: $sec-color;
+}
+
+.buttons {
+  padding: 1.2rem 0;
+}
+
+.trip-button {
+  color: $sec-color;
+  margin-left: 1rem;
+  padding: 0.4rem 1.8rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  border: 0.1rem solid $pri-color;
+
+  &:hover {
+    color: $thi-color;
+    background: $pri-color;
+    border-radius: 2rem 2rem 0 0;
+    box-shadow: 0.1rem 0.1rem 0.3rem #000;
+    border-bottom: 0.2rem solid $sec-color;
+  }
+}
+
+.title-name {
+  color: $sec-color;
+  font-size: 1.8rem;
+  font-weight: 300;
+  padding: 1rem 0 1rem 0;
+}
+
+input::placeholder, input:focus {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.5rem;
+  color: $pri-color;
+}
+
+label {
+  display: block;
+  padding-bottom: 1rem;
+  background: none;
+}
+
+input {
+  display: block;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.5rem;
+  height: 3rem;
+  width: 18rem;
+  border: none;
+  text-align: center;
+  background: none;
+  color: $pri-color;
+  border-bottom: 0.1rem solid $sec-color;
+}
+
+#search {
+  position: relative;
+  box-shadow: 0.2rem 0.2rem 1rem #000;
+  background: none;
+  border-radius: 0.3rem;
+  border: 0.1rem solid $sec-color;
+  cursor: pointer;
+  color: $sec-color;
+  margin-top: 2.2rem;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.8rem;
+  padding: 0.5rem 2rem;
+
+  &::before {
+    position: absolute;
+    content: "";
+    height: 3.5rem;
+    width: 120%;
+    background: $pri-color;
+    border-radius: 0.3rem;
+    transform: rotate(-3deg);
+    left: -1rem;
+    top: 0.2rem;
+    z-index: -1;
+  }
+
+  &:hover,
+  &:active {
+    background: $pri-color;
+    box-shadow: inset -0.5rem 0.5rem 1.5rem rgba(0, 0, 0, 0.8);
+    color: $sec-color;
+  }
+
+  &:active {
+    transform: scale(0.9);
+  }
+
+  &:hover::before {
+    visibility: hidden;
+  }
+}

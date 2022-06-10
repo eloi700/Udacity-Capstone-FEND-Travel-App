@@ -19,11 +19,11 @@
     font-size: 2.8rem;
     width: 4rem;
     height: 4rem;
-    line-height: 1.9;
+    line-height: 1.6;
     display: inline-block;
     text-align: center;
     border-radius: 0.5rem;
-    border: 0.1rem solid $pri-color;
+    border: 0.2rem solid $pri-color;
     margin: 0 0.3rem;
     transition: 0.3s ease-in-out;
   }
@@ -42,8 +42,7 @@ ion-icon {
 .designed, .copyright {
   padding-top: 0.8rem;
   text-align: center;
-  font-size: 2rem;
-  font-family: "Road Rage", cursive;
+  font-size: 1.2rem;
   color: $sec-m-color;
   letter-spacing: 0.2rem;
   font-weight: 100;

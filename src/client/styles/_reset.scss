@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap");
 
 *,
 ::before,
@@ -11,7 +11,7 @@
 :root,
 html {
   font-size: 62.5%;
-  font-family: 'Indie Flower', cursive;
+  font-family: "Poppins", sans-serif;
 }
 
 @mixin center {
@@ -20,12 +20,26 @@ html {
   align-items: center;
 }
 
-$pri-color: #FFD700;
+$pri-color: #fd93ae;
 $sec-color: #fff;
-$sec-m-color: #aaa;
-$thi-color: #400;
-$overlay-color: rgba(255, 217, 1, 0.3);
-$sup-color: #000;
+$sec-m-color: #eee;
+$thi-color: #2e151b;
+$overlay-color: rgba(0, 0, 97, 0.3);
+$form-bg-color: rgba(70, 1, 1, 0.3);
+$sup-color: #141414;
+$grey: #b1a296;
+
+footer,
+header,
+nav,
+section,
+main {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
 
 ol,
 ul {
@@ -37,4 +51,15 @@ select:focus,
 textarea:focus,
 button:focus {
   outline: none;
+}
+
+a, button{
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+input:focus::placeholder {
+  outline: none;
+  color: transparent;
 }
