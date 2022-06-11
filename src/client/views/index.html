@@ -32,7 +32,7 @@
     <main>
       <h1 class="title-form">Travel Planner</h1>
       <form id="search-form">
-        <h3 class="title-name">Location (City, Country)</h3>
+        <h3 class="title-name">Location (City)</h3>
         <div class="destination">
           <label for="to-location" class="to-location"></label>
           <input type="text" id="to-location" placeholder="Trip to:" required/>
@@ -120,12 +120,12 @@
     ></script>
 
     <!--Service workers Using Load event to keep the page load performant-->
-    <script>
+    <!-- <script>
       if ("serviceWorker" in navigator) {
         window.addEventListener("load", () => {
           navigator.serviceWorker.register("/service-worker.js");
         });
       }
-    </script>
+    </script> -->
   </body>
 </html>
