@@ -32,10 +32,10 @@
     <main>
       <h1 class="title-form">Travel Planner</h1>
       <form id="search-form">
-        <h3 class="title-name">Location (City)</h3>
+        <h3 class="title-name">Location (City Name)</h3>
         <div class="destination">
           <label for="to-location" class="to-location"></label>
-          <input type="text" id="to-location" placeholder="Trip to:" required/>
+          <input type="text" id="to-location" placeholder="Trip to:" required oninput="this.value = this.value.toUpperCase()"/>
         </div>
         <h3 class="title-name">Date (Departure)</h3>
         <div class="date">
