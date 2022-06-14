@@ -29,13 +29,20 @@
     </header>
 
     <!-- Trip Question Form -->
-    <main>
+    <main class="main-container">
       <h1 class="title-form">Travel Planner</h1>
       <form id="search-form">
         <h3 class="title-name">Location (City Name)</h3>
         <div class="destination">
           <label for="to-location" class="to-location"></label>
-          <input type="text" id="to-location" placeholder="Trip to:" required oninput="this.value = this.value.toUpperCase()"/>
+          <input
+            type="text"
+            id="to-location"
+            placeholder="Trip to:"
+            required
+            pattern="^[-a-zA-Z\s]{1,30}$"
+            oninput="this.value = this.value.toUpperCase()"
+          />
         </div>
         <h3 class="title-name">Date (Departure)</h3>
         <div class="date">
@@ -45,7 +52,8 @@
             id="start-date"
             placeholder="dd-mm-yyyy"
             onfocus="(this.type='date')"
-            onblur="if(this.value=='')(this.type='text')" required
+            onblur="if(this.value=='')(this.type='text')"
+            required
           />
         </div>
         <h3 class="title-name">Date (Return)</h3>
@@ -56,46 +64,60 @@
             id="end-date"
             placeholder="dd-mm-yyyy"
             onfocus="(this.type='date')"
-            onblur="if(this.value=='')(this.type='text')" required
+            onblur="if(this.value=='')(this.type='text')"
+            required
           />
         </div>
         <button id="search" type="submit">Search</button>
       </form>
 
-    <!-- Trip Info / Details -->
-    <!-- <div id="travel-info"> -->
-    <!-- Location Image -->
-    <!-- <div class="location-img-pixabay">
-          <img class = "loc-img" src="https://source.unsplash.com/0E9r6zCVGiU" alt="Destination Image" />
-        </div> -->
-    <!-- Location, date, weather etc. details -->
-    <!-- <div id="travel-text-details">
+      <!-- Trip Info / Details -->
+      <div id="travel-info" class="travel-info">
+        <!-- Location Image -->
+        <div class="location-img-pixabay">
+          <img
+            class="loc-img"
+            src="https://source.unsplash.com/0E9r6zCVGiU"
+            alt="Destination Image"
+          />
+        </div>
+        <!-- Location, date, weather etc. details -->
+        <div id="travel-text-details">
           <div class="info text-header">
             <h3 class="txt-title trip-to">
-              You're travelling to: <span class="mark-style" id="city-place">Cologne</span>
+              You're travelling to:
+              <span class="mark-style" id="city-place">Cologne</span>
             </h3>
             <h3 class="txt-title arrival-date">
-              You'll arrive on: <span class="mark-style" id="arrival-date">DD/MM/YYYY</span>
+              You'll arrive on:
+              <span class="mark-style" id="arrival-date">DD/MM/YYYY</span>
             </h3>
           </div>
           <div class="info buttons">
             <a href="" class="save trip-button">save</a>
             <a href="" class="delete trip-button">delete</a>
           </div>
-          <div class =" info countdown-n-weather">
+          <div class="info countdown-n-weather">
             <p class="trip-countdown">
-              The place you're travelling to is<span class="mark-style" id="days">15 </span>days away
+              The place you're travelling to is<span
+                class="mark-style"
+                id="days"
+                >15 </span
+              >days away
             </p>
             <p class="weather-forecast">
-              Weather Forecast: <span class="mark-style" id="temp">85</span> &#176; F
+              Weather Forecast:
+              <span class="mark-style" id="temp">85</span> &#176; F
             </p>
             <p class="weather-forecast-words">
-              and <span class="mark-style" id="weather-words"> Cloudy </span>throughout the day.
+              and
+              <span class="mark-style" id="weather-words"> Cloudy </span
+              >throughout the day.
             </p>
           </div>
         </div>
       </div>
-    </main> -->
+    </main>
 
     <!--Footer area-->
     <footer id="info-footer">

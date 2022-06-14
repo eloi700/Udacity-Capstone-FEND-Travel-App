@@ -9,6 +9,7 @@
   top: 0;
   background: $thi-color;
   border-radius: 0 0 2rem 2rem;
+  box-shadow: 0 0 0.1rem 0.3rem $pri-color;
 }
 
 .logo-img {
@@ -35,14 +36,14 @@
   font-size: 5rem;
   color: $pri-color;
   top: 0;
-  text-shadow: 0 0 0.3rem #000;
+  text-shadow: 0 0 0.3rem $grey;
   padding: 1rem 1.5rem 0 8rem;
   transition: 0.5s ease-in;
 
   &:hover{
     transform: rotate(-5deg);
-    text-decoration: underline $grey 0.8rem;
-    text-underline-offset: 0.4rem;
+    text-decoration: underline $pri-color 0.8rem;
+    text-underline-offset: 0.2rem;
   }
 }
 

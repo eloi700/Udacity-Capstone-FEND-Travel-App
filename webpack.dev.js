@@ -1,7 +1,6 @@
 const path = require("path"),
   webpack = require("webpack"),
   HtmlWebPackPlugin = require("html-webpack-plugin"),
-  { CleanWebpackPlugin } = require("clean-webpack-plugin"),
   MiniCssExtractPlugin = require("mini-css-extract-plugin"),
   CssMinimizerPlugin = require("css-minimizer-webpack-plugin"),
   TerserPlugin = require("terser-webpack-plugin");

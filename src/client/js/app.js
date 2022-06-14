@@ -1,129 +1,56 @@
-// /* Global Variables */
-// const generate = document.getElementById("generate"),
-//   feelings = document.getElementById("feelings");
+// WeatherBit
+const weatherBitUrl = 'https://api.weatherbit.io/v2.0/forecast/energy?'
+// const weatherBitKey = '8f907b99fd0542e9b7d2de184884e009'
+// geoNames
+// const geoNamesUrl = 'http://api.geonames.org/';
+// const geoNamesKey = 'eloi';
+// const geonamesQuery = 'searchJSON?formatted=true&q=';
+// Pixabay
+// const pixabayURL = 'https://pixabay.com/api/?key=';
+// const pixabayKey = '28046478-04bf275bfeb17b6c3253b4852';
 
-// // Create a new date instance dynamically with JS
-// let d = new Date();
-// let newDate = d.getMonth() + "." + d.getDate() + "." + d.getFullYear();
+// Validation for the place of destination
+const destinationLoc = document.getElementById("to-location");
+destinationLoc.addEventListener("change", useDestination);
+destinationLoc.addEventListener("click", useDestination);
 
-// // Configure URL - Personal API Key for Geonames API
-// const baseURL = "https://api.openweathermap.org/data/2.5/weather?zip=",
-//   apiKey = "",
-//   zipCode = document.getElementById("zip");
-// let entryZip = null;
-// let lang = "en";
-// let units = "metric";
+function useDestination() {
+  destinationLoc.classList.add('used');
+}
 
-// //Get zipCode and feelings
-// zipCode.onkeyup = () => {
-//   entryZip = zipCode.value;
-// };
-
-// feelings.onkeyup = () => {
-//   entryFeeling = feelings.value;
-// };
-
-// //Add eventListener click to generate button
-// generate.addEventListener("click", () => {
-//   if (zipCode.value !== "") {
-//     getWeatherData(baseURL, entryZip, apiKey);
-//   } else {
-//     alert("Please Enter a City.");
-//   }
-// });
-
-// // Build URL
-// const getWeatherData = async (baseURL, city, apiKey) => {
-//   await fetch(
-//     `${baseURL}${city}&units=${units}&lang=${lang}&appid=${apiKey}`
-//   )
-//     .then((res) => res.json())
-//     .then((data) => {
-//       return postData("/all", {
-//         temperature: data.main.temp,
-//         date: newDate,
-//         userFeelings: entryFeeling,
-//       });
-//     })
-//     // Fetch Data to HTML
-//     .then(() => {
-//         retrieveData()
-//     });
-// };
-
-// // Function - GET Request
-// const getData = async (url) => {
-//   const res = await fetch(url);
-//   try {
-//     const data = await res.json();
-//     return data;
-//   } catch (error) {
-//     console.log("Error", error);
-//   }
-// };
-
-// //Function - POST Request
-// const postData = async (url, data) => {
-//   const res = await fetch(url, {
-//     method: "POST",
-//     credentials: "same-origin",
-//     headers: {
-//       "Content-Type": "application/json",
-//     },
-//     body: JSON.stringify(data),
-//   });
-//   try {
-//     const newData = await res.json();
-//     return newData;
-//   } catch (error) {
-//     console.log("Error", error);
-//   }
-// };
-
-// //Function to Retrieve or Get Project Data
-// const retrieveData = async () => {
-//   const request = await fetch("/all");
-//   try {
-//     //Transform into JSON
-//     const allData = await request.json();
-//     console.log(allData);
-//     //Write updated data to DOM elements
-//     document.getElementById("date").innerHTML =
-//       "Today's Date:  " + allData.date;
-//     document.getElementById("temp").innerHTML =
-//       "Temperature:  " + Math.round(allData.temperature) + "&#x2103;";
-//     document.getElementById("content").innerHTML =
-//       "I feel " + allData.userFeelings;
-//   } catch (error) {
-//     console.log("Error", error);
-//     // appropriately handle the error
-//   }
-// };
-
-// const today = new Date().toISOString().split("T")[0];
-// document.getElementById('start-date').min = today;
+// Validation for the date of travel
+const startDateTrip = document.getElementById("start-date");
+const endDateTrip = document.getElementById("end-date");
 
 const today = new Date();
-const dd = today.getDate();
-const mm = today.getMonth() + 1; //January is 0 need to add 1.
-const yyyy = today.getFullYear();
+const month = `${today.getMonth()+1}`.padStart(2, '0');
+const minDate = `${today.getFullYear()}-${month}-${today.getDate()}`;
+startDateTrip.min = minDate;
+endDateTrip.min = minDate;
 
-if (dd < 10) {
-  dd = "0" + dd;
-}
 
-if (mm < 10) {
-  mm = "0" + mm;
-}
-
-today = yyyy + "-" + mm + "-" + dd;
-document.getElementById("start-date").setAttribute("max", today);
-
-// Destination Location
-const destinationLoc = document.getElementById("to-location");
-destinationLoc.addEventListener("change", function () {
-  if (Client.cityLocation(destinationLoc.value)) {
-  } else {
-    alert("Please enter valid location.");
-  }
+startDateTrip.addEventListener("change", function () {
+  endDateTrip.min = startDateTrip.value;
 });
+
+endDateTrip.addEventListener("change", function () {
+  endDateTrip.classList.add('used');
+});
+
+//Activation of search button
+const tripInfo = document.querySelector(".travel-info");
+const searchBtn = document.getElementById("search");
+const searchForm = document.getElementById("search-form");
+
+searchBtn.addEventListener("click", function (event){
+  event.preventDefault();
+
+  if (searchForm.checkValidity()){
+    tripInfo.classList.add('show');
+    searchForm.classList.add('hide');
+  } else{
+    destinationLoc.classList.add('used');
+    startDateTrip.classList.add('used');
+    endDateTrip.classList.add('used');
+  }
+})

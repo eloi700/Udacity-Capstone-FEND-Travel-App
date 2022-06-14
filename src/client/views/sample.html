@@ -1,131 +1,102 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
   <head>
-    <!-- Required meta tags -->
     <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-
-    <title>Travel App!</title>
+    <title>Travel Buddy</title>
   </head>
 
   <body>
+    <!-- NavBar -->
     <header>
-      <!-- Image and text -->
-      <nav class="navbar navbar-light bg-light">
-        <a class="navbar-brand" href="#">
-          <img
-            src=""
-            width="30"
-            height="30"
-            class="d-inline-block align-top"
-            alt=""
-          />
-          Travel App
-        </a>
-      </nav>
-    </header>
-    <main>
-      <div class="container-fluid p-0">
-        <section class="hero">
-          <div class="caption jumbotron jumbotron-fluid">
-            <div class="container search">
-              <h1 class="display-1 text-center">Travel</h1>
-              <div class="row">
-                <input
-                  type="text"
-                  id="city"
-                  placeholder="City"
-                  aria-label="City"
-                  class="form-control col-md-3 mt-1"
-                />
-                <input
-                  type="date"
-                  id="date_start"
-                  aria-label="Date"
-                  class="form-control col-sm-6 col-md-3 mt-1"
-                />
-                <input
-                  type="date"
-                  id="date_end"
-                  aria-label="Date"
-                  class="form-control col-sm-6 col-md-3 mt-1"
-                />
-                <!-- <div class="input-group-append col-md-1"> -->
-                <button
-                  class="btn btn-secondary col-md-2 mt-1"
-                  type="button"
-                  id="button_search"
-                >
-                  Search
-                </button>
-                <!-- </div> -->
-              </div>
-            </div>
-          </div>
-          <div
-            class="modal fade"
-            id="tripModal"
-            tabindex="-1"
-            role="dialog"
-            aria-labelledby="tripModalTitle"
-            aria-hidden="true"
-          >
-            <div
-              class="modal-dialog modal-lg modal-dialog-centered"
-              role="document"
-            >
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h3 class="modal-title trip_title" id="tripModalTitle"></h3>
-                  <button class="trip_cancel close" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div>
-                <div class="modal-body">
-                  <div class="container-fluid">
-                    <div class="media row">
-                      <img
-                        src=""
-                        class="images mr-3 col-12 col-lg-5"
-                        alt="Popular Images from Trip Location"
-                      />
-                      <div class="media-body col-12 col-lg-7">
-                        <h4 class="mt-0">
-                          Trip to: <span class="media_heading"></span>
-                        </h4>
-                        <h6 class="mt-0">
-                          Departure: <span class="media_heading"></span>
-                        </h6>
-                        <h6 class="mt-0">
-                          Return: <span class="media_heading"></span>
-                        </h6>
-                        <h6 class="mt-0">
-                          Duration: <span class="media_heading"></span>
-                        </h6>
-                        <span class="trip_countdown"></span>
-                        <span class="trip_weather"></span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary trip_cancel">
-                      Close
-                    </button>
-                    <button type="button" class="btn btn-primary trip_save">
-                      Save
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <!-- <section class="trips"></section> -->
+      <div class="logo">
+        <a href="index.html" class="logo"
+          ><span style="color: #ff494a">T</span>B</a
+        >
       </div>
-    </main>
+      <div class="nav-links">
+        <a href="#form-section">Go Somewhere</a>
+      </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about">
+      <div class="about-wrapper">
+        <h1><span style="color: #ff494a">Travel</span> Buddy</h1>
+        <h3>Go Somewhere New</h3>
+        <p>
+          Travel Buddy lets you plan you next trip, simply enter your place of
+          origin, your destination and your trip date.
+        </p>
+        <a href="#form-section" class="go-somewhere-btn">Go Somewhere New +</a>
+      </div>
+    </section>
+
+    <!-- Input Section -->
+    <section id="form-section">
+      <div class="form-container">
+        <div class="form">
+          <form>
+            <h1>Enter Trip Information</h1>
+            <input
+              type="text"
+              placeholder="Place of Origin"
+              name="origin"
+              required
+            />
+            <input
+              type="text"
+              placeholder="Destination"
+              name="destination"
+              required
+            />
+            <label for="date">Departing on:</label>
+            <input type="date" name="date" />
+            <input
+              type="submit"
+              class="input-btn"
+              name="submit"
+              value="Submit"
+            />
+          </form>
+        </div>
+      </div>
+    </section>
+    <!-- Result Section -->
+    <section id="result-section" class="hidden">
+      <div class="result-container">
+        <div class="result-left">
+          <img id="destination-img" src="#" alt="destination-img" />
+        </div>
+        <div class="result-right">
+          <h2 class="destination-text">
+            Destination:
+            <span id="city" class="result-underline">New York</span>
+          </h2>
+          <h2 class="destination-date">
+            Departing on:
+            <span id="date" class="result-underline">DD/MM/YYYY</span>
+          </h2>
+          <h2 class="destination-countdown">
+            This trip is
+            <span id="days-left" class="result-underline">32</span>
+            days away
+          </h2>
+          <h2 class="local-weather">
+            Local weather is:
+            <span id="destination-weather" class="result-underline">54</span>
+            &#176; F
+          </h2>
+          <div class="result-btn-container">
+            <a id="delete-btn" href="#">Delete</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>Travel Buddy,</p>
+      <p>All rights reserved ©</p>
+    </footer>
     <script>
       // Check that service workers are supported
       if ("serviceWorker" in navigator) {

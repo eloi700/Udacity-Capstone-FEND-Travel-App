@@ -1,7 +1,6 @@
 @import 'reset', 'header', 'form-q', 'footer';
 
 body {
-  position: relative;
   @include center;
   flex-direction: column;
   background: $overlay-color;
@@ -11,6 +10,14 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 100vh;
+}
+
+.main-container{
+  @include center;
+  position: relative;
+  height: 50rem;
+  width: 30rem;
+  flex-direction: column;
 }
 
 // Responsive view on bigger screen

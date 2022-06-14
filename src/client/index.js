@@ -1,10 +1,10 @@
-import { cityLocation } from './js/validateFormEntry'
+import { cityLocation } from './js/cityLocValidation';
+import { checkDate } from './js/dateValidation';
 import { app } from './js/app';
-// import { handleSubmit } from './js/formHandler'
 
 import './styles/main.scss';
 
 export {
     cityLocation,
-    // handleSubmit
+    checkDate
 }
