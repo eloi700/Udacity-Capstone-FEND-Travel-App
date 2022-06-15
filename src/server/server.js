@@ -50,8 +50,8 @@ app.post("/all", (req, res) => {
     weather: req.body.weather,
     daysLeft: req.body.daysLeft,
   };
-  //   res.send("done");
-  res.end();
+  res.send(projectData);
+  // res.end();
 });
 
 // designates what port the app will listen for the incoming requests
