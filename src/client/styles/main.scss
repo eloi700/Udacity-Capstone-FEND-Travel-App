@@ -4,9 +4,9 @@ body {
   @include center;
   flex-direction: column;
   background: $overlay-color;
-  background-image: url("https://source.unsplash.com/UmV2wr-Vbq8");
+  background-image: url("https://source.unsplash.com/uAcg4PZ_f-o");
   background-blend-mode: overlay;
-  background-position: 50%;
+  background-position: 100% 100%;
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 100vh;

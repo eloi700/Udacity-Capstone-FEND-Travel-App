@@ -1,14 +1,16 @@
 import { useDestination } from './js/location';
 import { cityLocation } from './js/cityLocValidation';
-// import { checkDate } from './js/dateValidation';
-import { run } from './js/app';
+// import { daysDiff } from './js/daysDiff';
+import { checkDate } from './js/dateValidation';
+import { app } from './js/app';
 
 import './styles/main.scss';
 
-run();
+// run();
 
 export {
     useDestination,
     cityLocation,
+    // daysDiff
     // checkDate,
 }

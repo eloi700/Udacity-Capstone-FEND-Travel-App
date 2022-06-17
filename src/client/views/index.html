@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather-Journal App</title>
     <!-- <link rel="stylesheet" href="main.css" /> -->
-    <link rel="stylesheet" href="/up/css/main.css" />
+    <!-- <link rel="stylesheet" href="/up/css/main.css" /> -->
 
     <!-- font link -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -32,33 +32,32 @@
     <main class="main-container">
       <h1 class="title-form">Travel Planner</h1>
       <form id="search-form">
-        <h3 class="title-name">Location (City Name)</h3>
+        <h3 class="title-name">City Destination</h3>
         <div class="destination">
           <label for="to-location" class="to-location"></label>
           <input
             type="text"
             id="to-location"
-            placeholder="Trip to:"
+            placeholder="Where to?"
             name="toLocation"
             required
             pattern="^[-a-zA-Z\s]{1,30}$"
-            oninput="this.value = this.value.toUpperCase()"
           />
         </div>
-        <h3 class="title-name">Date (Departure)</h3>
+        <h3 class="title-name">Date of Travel</h3>
         <div class="date">
           <label for="start-date"></label>
           <input
             type="text"
             id="start-date"
             name="start-date"
-            placeholder="dd-mm-yyyy"
+            placeholder=""
             onfocus="(this.type='date')"
             onblur="if(this.value=='')(this.type='text')"
             required
           />
         </div>
-        <h3 class="title-name">Date (Return)</h3>
+        <h3 class="title-name">Date of Return</h3>
         <div class="date">
           <label for="end-date"></label>
           <input
@@ -80,42 +79,38 @@
         <div class="location-img-pixabay">
           <img
             class="loc-img"
-            src="https://source.unsplash.com/0E9r6zCVGiU"
-            alt="Destination Image"
+            src=""
           />
         </div>
         <!-- Location, date, weather etc. details -->
         <div id="travel-text-details">
           <div class="info text-header">
             <h3 class="txt-title trip-to">
-              You're travelling to:
-              <span class="mark-style" id="city-place">Cologne</span>
+              <span class="mark-style" id="city-place"></span>
             </h3>
-            <h3 class="txt-title arrival-date">
-              You'll arrive on:
+            <h3 class="txt-title datesOfTravel">
+              <span class="mark-style" id="departure-date">DD/MM/YYYY</span>to
               <span class="mark-style" id="arrival-date">DD/MM/YYYY</span>
             </h3>
           </div>
           <div class="info buttons">
-            <a href="" class="save trip-button">save</a>
-            <a href="" class="delete trip-button">delete</a>
+            <button class="save trip-button" type="button">save</button>
+            <button class="delete trip-button" type="button">delete</button>
           </div>
           <div class="info countdown-n-weather">
-            <p class="trip-countdown">
-              The place you're travelling to is<span
-                class="mark-style"
-                id="days"
-                >15 </span
-              >days away
-            </p>
-            <p class="weather-forecast">
-              Weather Forecast:
-              <span class="mark-style" id="temp">85</span> &#176; F
-            </p>
-            <p class="weather-forecast-words">
-              and
-              <span class="mark-style" id="weather-words"> Cloudy </span
-              >throughout the day.
+            <p class="trip-countdown-loc mark-style"></p>
+            <span class="info-addl-txt">is</span>
+            <span class="mark-style" id="trip-countdown-days">15</span>
+            <span></span>day/s away.</span>
+          </div>
+          <div id="weather-forecast">
+            <p class="mark-style weather-title">weather forecast:</p>
+            <p class="temp-info">
+              <span id="temp">10 F</span>
+              <span id="low-temp">3 F</span>
+              <span id="max-temp">12 F</span>
+              <span id="temp-icon">⛅</span>
+              <span id="temp-words">Cloudy</span>
             </p>
           </div>
         </div>
