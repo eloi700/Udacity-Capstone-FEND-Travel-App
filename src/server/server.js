@@ -62,8 +62,6 @@ app.post("/all", (req, res) => {
       if (weatherObject.datetime === req.body.startDate) {
         projectData['weatherForecast'] = {
           temperature: weatherObject.temp,
-          low_temperature: weatherObject.low_temp,
-          max_temperature: weatherObject.max_temp,
           datetime: weatherObject.datetime,
           description: weatherObject.weather.description,
           icon: weatherObject.weather.icon
@@ -80,14 +78,3 @@ app.post("/all", (req, res) => {
     res.send(projectData);
   })
 });
-
-// Countdown - Days away
-
-// function daysDiff(daysLeft){
-// const oneDay = 86400000,
-// daysLeft = Math.ceil((Date.parse(dateEnd)) - Date.parse(dateStart)) / 86400000,
-// const numberDays = document.getElementById('days');
-// return numberDays.innerText = daysLeft;
-// }
-// export { daysDiff }
-

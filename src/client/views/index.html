@@ -70,17 +70,14 @@
             required
           />
         </div>
-        <button id="search" type="submit">Search</button>
+        <button id="search" class="btn" type="submit">Search</button>
       </form>
 
       <!-- Trip Info / Details -->
       <div id="travel-info" class="travel-info">
         <!-- Location Image -->
         <div class="location-img-pixabay">
-          <img
-            class="loc-img"
-            src=""
-          />
+          <img class="loc-img" src="" />
         </div>
         <!-- Location, date, weather etc. details -->
         <div id="travel-text-details">
@@ -94,24 +91,24 @@
             </h3>
           </div>
           <div class="info buttons">
-            <button class="save trip-button" type="button">save</button>
-            <button class="delete trip-button" type="button">delete</button>
+            <button class="save btn" type="button">save</button>
+            <button class="delete btn" type="button">delete</button>
           </div>
-          <div class="info countdown-n-weather">
-            <p class="trip-countdown-loc mark-style"></p>
-            <span class="info-addl-txt">is</span>
-            <span class="mark-style" id="trip-countdown-days">15</span>
-            <span></span>day/s away.</span>
+          <div class="trip-countdown">
+            <p>
+              You're trip is
+              <span class="mark-style" id="trip-countdown-days"></span>day/s
+              away.
+            </p>
+            <!-- <span>day/s away</span> -->
           </div>
           <div id="weather-forecast">
-            <p class="mark-style weather-title">weather forecast:</p>
-            <p class="temp-info">
-              <span id="temp">10 F</span>
-              <span id="low-temp">3 F</span>
-              <span id="max-temp">12 F</span>
-              <span id="temp-icon">⛅</span>
-              <span id="temp-words">Cloudy</span>
-            </p>
+            <h6 id="weather-title">Travel Weather Forecast</h6>
+            <div class="temp-info mark-style">
+              <span class="temp" id="temp"></span>
+              <img class="icon" id="temp-icon" src="" />
+              <span class="desc" id="temp-desc"></span>
+            </div>
           </div>
         </div>
       </div>

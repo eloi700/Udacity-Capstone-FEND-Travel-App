@@ -10,6 +10,7 @@ const startDateTrip = document.getElementById("start-date");
 const endDateTrip = document.getElementById("end-date");
 
 const today = new Date();
+const oneDay = 86400000;
 const month = `${today.getMonth() + 1}`.padStart(2, "0");
 const minDate = `${today.getFullYear()}-${month}-${today.getDate()}`;
 startDateTrip.min = minDate;
@@ -39,6 +40,13 @@ searchBtn.addEventListener("click", function (event) {
     searchForm.classList.add("hide");
     const formData = new FormData(searchForm);
 
+  // days countdown
+  let dayStartText = formData.get("start-date");
+  const newStartDate = new Date(dayStartText);
+  const daysDiff = Math.ceil((newStartDate.getTime() - today.getTime()) / oneDay);
+  const daysLeft = document.getElementById('trip-countdown-days');
+  daysLeft.textContent = daysDiff;
+
     fetch("/all", {
       method: "POST",
       headers: {
@@ -62,28 +70,32 @@ searchBtn.addEventListener("click", function (event) {
   }
 });
 
+// set the trip details
 function setInfo() {
   if (!dataObject) {
     return;
   }
-
   const locImage = document.querySelector(".loc-img");
   const location = document.getElementById("city-place");
   const deptDate = document.getElementById("departure-date");
   const arrDate = document.getElementById("arrival-date");
-  const daysAway = document.querySelector(".trip-countdown-loc");
+  const temperature = document.getElementById("temp");
+  const icon = document.getElementById("temp-icon");
+  const description = document.getElementById("temp-desc");
   location.textContent = `${dataObject.location}, ${dataObject.countryName}`;
   deptDate.textContent = `${dataObject.startDate}`;
   arrDate.textContent = `${dataObject.endDate}`;
-  daysAway.textContent = `${dataObject.location}, ${dataObject.countryName}`;
   locImage.src = `${dataObject.imageUrl}`;
+  temperature.textContent = `${dataObject.weatherForecast.temperature}℃`;
+  description.textContent = `${dataObject.weatherForecast.description}`;
+  icon.src = `/assets/icons/${dataObject.weatherForecast.icon}.png`;
 }
 
 // delete trip
 const delButton = document.querySelector(".delete");
 delButton.addEventListener("click", function () {
   tripInfo.classList.remove("show");
-  localStorage.removeItem('travelInfo');
+  localStorage.removeItem("travelInfo");
   searchForm.classList.remove("hide");
   searchForm.reset();
 });
@@ -95,7 +107,7 @@ saveButton.addEventListener("click", function () {
     localStorage.setItem("travelInfo", JSON.stringify(dataObject));
 });
 
-// retrieve save data from local storage
+// retrieve save trip from local storage
 function readData() {
   const storageData = localStorage.getItem("travelInfo");
   if (storageData) {

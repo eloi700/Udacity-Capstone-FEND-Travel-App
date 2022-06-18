@@ -1,4 +1,4 @@
-@import 'reset', 'header', 'form-q', 'footer';
+@import "reset", "header", "form-q", "footer";
 
 body {
   @include center;
@@ -12,7 +12,7 @@ body {
   min-height: 100vh;
 }
 
-.main-container{
+.main-container {
   @include center;
   position: relative;
   height: 50rem;
@@ -20,10 +20,95 @@ body {
   flex-direction: column;
 }
 
-// Responsive view on bigger screen
-@media screen and (min-width: 800px) {
-  .landing__container {
-    max-width: 80%;
-    padding: 1rem;
+// Responsive view on other screen devices
+@media screen and (min-width: 600px) {
+  .main-container {
+    height: 60rem;
+    width: 50rem;
+  }
+
+  .title-form {
+    font-size: 3.5rem;
+  }
+
+  #search-form,
+  #travel-info {
+    height: 48rem;
+    width: 40rem;
+
+    &::before,
+    &::after {
+      content: "";
+      height: 12rem;
+      width: 12rem;
+      bottom: 0;
+      left: 0;
+      border-width: 1rem;
+    }
+
+    &::after {
+      top: 0;
+      left: 28rem;
+      border-color: $pri-color $pri-color transparent transparent;
+    }
+  }
+
+  .location-img-pixabay {
+    position: absolute;
+    top: 1rem;
+    bottom: 0;
+    left: 1.2rem;
+  }
+
+  .loc-img {
+    width: 38rem;
+    height: 20rem;
+  }
+
+  #travel-text-details {
+    top: 21rem;
+  }
+
+  .txt-title{
+    font-size: 2rem;
+    line-height: 2rem;
+    font-weight: 300;
+  }
+
+  .mark-style, p {
+    font-size: 1.8rem;
+    font-weight: 300;
+  }
+
+  #search{
+    margin-top: 3rem;
+  }
+
+  .btn {
+    border-radius: 2rem;
+    margin: 0 0.5rem 1rem 0;
+    font-size: 2rem;
+    font-weight: 300;
+  }
+
+  #weather-title {
+    font-size: 1.8rem;
+    padding: 1rem 1.8rem;
+    font-weight: 500;
+  }
+
+  .temp, .desc{
+    position: relative;
+    font-size: 2rem;
+    top: -1rem;
+  }
+
+  .temp{
+    letter-spacing: 0.2rem;
+  }
+
+  img.icon {
+   height: 7rem;
+   width: 7rem;
   }
 }
