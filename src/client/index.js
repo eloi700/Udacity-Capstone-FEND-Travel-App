@@ -2,7 +2,7 @@ import { useDestination } from './js/location';
 import { cityLocation } from './js/cityLocValidation';
 // import { daysDiff } from './js/daysDiff';
 import { checkDate } from './js/dateValidation';
-import { app } from './js/app';
+import { run } from './js/app';
 
 import './styles/main.scss';
 
@@ -80,7 +80,7 @@ import './media/icons/u00n.png';
 
 
 
-
+run();
 
 export {
     useDestination,
