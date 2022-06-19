@@ -20,8 +20,8 @@ function run() {
   startDateTrip.min = minDate;
   endDateTrip.min = minDate;
 
-  destinationLoc.addEventListener("change", useDestination);
-  destinationLoc.addEventListener("click", useDestination);
+  destinationLoc.addEventListener("change", Client.useDestination);
+  destinationLoc.addEventListener("click", Client.useDestination);
 
   startDateTrip.addEventListener("change", function () {
     endDateTrip.min = startDateTrip.value;
@@ -48,35 +48,7 @@ function run() {
       const daysLeft = document.getElementById("trip-countdown-days");
       daysLeft.textContent = daysDiff;
 
-      fetch("/all", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          location: formData.get("toLocation"),
-          startDate: formData.get("start-date"),
-          endDate: formData.get("end-date"),
-        }),
-      })
-        .then((response) => {
-          if (response.ok) {
-            return response.json();
-          } else {
-            return response.text().then((text) => {
-              throw new Error(text);
-            });
-          }
-        })
-        .then((data) => {
-          dataObject = data;
-          setInfo();
-          tripInfo.classList.add("show");
-          searchForm.classList.add("hide");
-        })
-        .catch((error) => {
-          alert(error.message);
-        });
+      Client.makeRequest(formData, (data) => dataObject = data);
     } else {
       destinationLoc.classList.add("used");
       startDateTrip.classList.add("used");
@@ -94,43 +66,19 @@ function run() {
 
   // save trip in local storage
   saveButton.addEventListener("click", function () {
-    if (dataObject)
+    if (dataObject) {
       localStorage.setItem("travelInfo", JSON.stringify(dataObject));
+    }
   });
 
   // load trip from storage
   readData();
-  setInfo();
+  Client.setInfo(dataObject);
 
   if (dataObject) {
     tripInfo.classList.add("show");
     searchForm.classList.add("hide");
   }
-}
-
-function useDestination() {
-  destinationLoc.classList.add("used");
-}
-
-// set the trip details
-function setInfo() {
-  if (!dataObject) {
-    return;
-  }
-  const locImage = document.querySelector(".loc-img");
-  const location = document.getElementById("city-place");
-  const deptDate = document.getElementById("departure-date");
-  const arrDate = document.getElementById("arrival-date");
-  const temperature = document.getElementById("temp");
-  const icon = document.getElementById("temp-icon");
-  const description = document.getElementById("temp-desc");
-  location.textContent = `${dataObject.location}, ${dataObject.countryName}`;
-  deptDate.textContent = `${dataObject.startDate}`;
-  arrDate.textContent = `${dataObject.endDate}`;
-  locImage.src = `${dataObject.imageUrl}`;
-  temperature.textContent = `${dataObject.weatherForecast.temperature}℃`;
-  description.textContent = `${dataObject.weatherForecast.description}`;
-  icon.src = `/assets/icons/${dataObject.weatherForecast.icon}.png`;
 }
 
 // retrieve save trip from local storage
@@ -141,4 +89,4 @@ function readData() {
   }
 }
 
-export { run };
+window.addEventListener('load', run);

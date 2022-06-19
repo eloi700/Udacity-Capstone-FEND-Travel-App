@@ -1,11 +1,15 @@
-import { useDestination } from './js/location';
-import { cityLocation } from './js/cityLocValidation';
-// import { daysDiff } from './js/daysDiff';
-import { checkDate } from './js/dateValidation';
-import { run } from './js/app';
+// Client
+import './js/app';
 
+// Stylesheet
 import './styles/main.scss';
 
+// Location, Set Travel Details & Make Request
+import { useDestination } from './js/location';
+import { setInfo } from './js/setInfo';
+import { makeRequest } from './js/request';
+
+// Weather icons
 import './media/icons/a01d.png';
 import './media/icons/a01n.png';
 import './media/icons/a02d.png';
@@ -79,12 +83,8 @@ import './media/icons/u00d.png';
 import './media/icons/u00n.png';
 
 
-
-run();
-
 export {
     useDestination,
-    cityLocation,
-    // daysDiff
-    // checkDate,
+    setInfo,
+    makeRequest
 }

@@ -34,7 +34,6 @@
   width: 30rem;
   background: $form-bg-color;
   box-shadow: 0.2rem 0.2rem 1rem $sup-color;
-  border-radius: 3rem 0 3rem 0;
 
   &::before,
   &::after {
@@ -46,13 +45,13 @@
     left: 0;
     border-width: 0.3rem;
     border-style: solid;
-    border-color: transparent transparent $pri-color $pri-color;
+    border-color: transparent transparent $corner-color $corner-color;
   }
 
   &::after {
     top: 0;
     left: 22rem;
-    border-color: $pri-color $pri-color transparent transparent;
+    border-color: $corner-color $corner-color transparent transparent;
   }
 }
 
@@ -92,7 +91,7 @@
   margin: 1rem 0;
   word-spacing: 0.2rem;
   letter-spacing: 0.2rem;
-  background: $overlay-color;
+  background: $corner-color;
 }
 
 .temp-info {
@@ -218,7 +217,8 @@ input {
   border-bottom: 0.1rem solid $sec-color;
 
   &.used:invalid {
-    border: 0.2rem solid red;
+    border: 0.3rem solid red;
+    border-radius: 0.3rem;
   }
 }
 
@@ -234,18 +234,19 @@ input {
   font-size: 1.8rem;
   padding: 0.5rem 2rem;
   text-transform: capitalize;
-  transition: 0.1s ease-in-out;
+  transition: 0.3s ease-in-out;
 
   &:hover,
   &:active {
-    background: transparent;
+    background: linear-gradient($sec-color, $pri-color);
     border: 0.1rem solid $sec-color;
     border-radius: 2.5rem 2.5rem 0 0;
+    color: $thi-color;
   }
 
   &:active {
     transform: scale(0.9);
-    animation: gradient 100ms;
+    animation: gradient 80ms;
     background: $form-bg-color;
     box-shadow: inset -0.5rem 0.5rem 1.5rem $pri-color;
     color: $sec-color;

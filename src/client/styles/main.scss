@@ -6,7 +6,7 @@ body {
   background: $overlay-color;
   background-image: url("https://source.unsplash.com/uAcg4PZ_f-o");
   background-blend-mode: overlay;
-  background-position: 100% 100%;
+  background-position: 50% 40%;
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 100vh;
@@ -43,18 +43,39 @@ body {
       width: 12rem;
       bottom: 0;
       left: 0;
-      border-width: 1rem;
+      border-width: 0.5rem;
     }
 
     &::after {
       top: 0;
       left: 28rem;
-      border-color: $pri-color $pri-color transparent transparent;
     }
   }
 
+  .title-name {
+    color: $sec-color;
+    font-size: 2rem;
+    font-weight: 300;
+    letter-spacing: 0.1rem;
+    padding: 1rem 0 1rem 0;
+  }
+
+  input {
+    height: 5rem;
+    width: 25rem;
+  }
+
+  input::placeholder,
+  input:focus {
+    font-size: 2rem;
+    color: $pri-color;
+  }
+
+  #departure-date, #arrival-date{
+    font-size: 2rem;
+  }
+
   .location-img-pixabay {
-    position: absolute;
     top: 1rem;
     bottom: 0;
     left: 1.2rem;
