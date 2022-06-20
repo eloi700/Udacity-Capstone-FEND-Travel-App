@@ -1,4 +1,4 @@
-# <ins>**walkabout**</ins>Travel Planner
+# <ins>**walkabout**</ins> **Travel Planner**
 
 ## Introduction
 Travel Planner App is Udacity Capstone Project for Front-End Developer. Struggles on this project are really promising.  It helps me a lot as a novice programmer.  It develops my skills, knowledge, understanding as well as patience.  Read, check, research & test more to stay alive and keep kicking . . . 😄 Furthermore, I encourage you to love what you do and STAY motivated all the time.
@@ -35,24 +35,25 @@ https://user-images.githubusercontent.com/67271950/174584154-91aa7dec-a6e4-4b4d-
 
 ## Dependencies / DevDependencies
 These are the modules / packages installed through npm.
-- webpack
-- webpack-plugin
-- webpack-dev-server
-- html webpack
-- body parser
-- node-fetch
-- express
-- jest
-- dotenv
-- Babel
-- cors
-- css-loader
-- sass
-- sass-loader
-- jsdom
+
+- webpack - a module bundler to bundle JavaScript files for usage in a browser
+- webpack plugin - a JS object that has apply method being called by the webpack compiler.
+- webpack devserver - a webpack supported CLI-based tool for starting a static server for the assets.
+- html webpack - used to simplify creation of HTML files to serve the webpack bundles.
+- express body parser - used to expose express middlewares for parsing text, JSON and raw data.
+- node fetch - enables to use the fetch() function.
+- express - extensible framework that provides a set of common utilities for building servers
+- jest - used to test the framework built on JavaScript.
+- dotenv - used to load environment variables from a .env file into the process. .env used to keep the keys of the APIs.
+- Babel - a javascript compiler.
+- css-loader - used to collect CSS from all the CSS files referenced.
+- sass - used for the stylesheets.
+- sass-loader - a loader that uses Sass's custom importer feature to pass all queries to the Webpack resolving engine.
+- jsdom - used to parse and interacts with assembled HTML just like a browser.
 
 ## APIs (Application Programming Interface)
 The following software intermediary were used:
+
 **1. Geonames API** - a geographical database used to locate the specified city and via latitude and longtide, pull it's respective country.
 
 **2. WeatherBit API** - a weather information or database used to pull the city place weather temperature, icon(code) and it's description.
