@@ -1,4 +1,4 @@
-# **Travel Planner**
+# **walkabout Travel Planner**
 
 ## Introduction
 Travel Planner App is Udacity Capstone Project for Front-End Developer. Struggles on this project are really promising.  It helps me a lot as a novice programmer.  It develops my skills, knowledge, understanding as well as patience.  Read, check, research & test more to stay alive and keep kicking . . . 😄 Furthermore, I encourage you to love what you do and STAY motivated all the time.
@@ -50,3 +50,9 @@ These are the modules / packages installed through npm (if some not mentioned, p
 - sass
 - sass-loader
 - jsdom
+
+## APIs (Application Programming Interface)
+The following software intermediary were used:
+**1. Geonames API** - a geographical database used to locate the specified city and via latitude and longtide, pull it's respective country via
+**2. WeatherBit API** - a weather information or database used to pull the city place weather temperature, icon(code) and it's description.
+**3. Pixabay API** - a RESTful interface used to search and retrieve free and popular city images.  Though some of the cities known images are not available, still the rest of the details of the trip will be shown in the card.
