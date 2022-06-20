@@ -30,7 +30,6 @@ app.use(bodyParser.json());
 
 // Cors for cross origin allowance
 const cors = require("cors");
-const { response } = require("express");
 app.use(cors());
 
 // Setup Server
