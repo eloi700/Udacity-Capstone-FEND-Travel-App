@@ -16,11 +16,11 @@ Like the other travel app, this **TRAVEL APP** shows you a form where you can en
 
 **How does it work?**
 
-- The city must be entered correctly, if it is unknown to geoNames it will throw an error.  Once the travel date has been entered, past dates will be blocked accordingly so the return date will be entered only after the travel date. If one wish to enter the return date first and it is the current date or earlier before the travel date, it will not proceed or search won't process until it is corrected.
+- The city must be entered correctly, if it is unknown to GeoNamess it will throw an error.  Once the travel date has been entered, past dates will be blocked accordingly so the return date will be entered only after the travel date. If one wish to enter the return date first and it is the current date or earlier before the travel date, it will not proceed or search won't process until it is corrected.
 
 - When it get through, travel details will be presented in another card.  It shows the famous image of the city using Pixabay.  Pixabay retrieves the image according to search city location.
 
-- Location of the trip (city) is as per input of the client and simoultaneously the country will be retrieve through geoNames API. Date details is as per input of the client. For the days difference before the trip is calculated which shows the countdown.
+- Location of the trip (city) is as per input of the client and simoultaneously the country will be retrieve through GeoNamess API. Date details is as per input of the client. For the days difference before the trip is calculated which shows the countdown.
 
 - For travel forecast, I used WeatherBit API.  It shows the temperature data, the icon and it's description.
 
@@ -33,3 +33,20 @@ https://user-images.githubusercontent.com/67271950/174584154-91aa7dec-a6e4-4b4d-
 
 ![trvl-wetr-details](https://user-images.githubusercontent.com/67271950/174588038-16cdd313-81d3-42f3-ba82-c602a6e68e61.png)
 
+## Dependencies / DevDependencies
+These are the modules / packages installed through npm (if some not mentioned, please check on the package.json)
+- webpack
+- webpack-plugin
+- webpack-dev-server
+- html webpack
+- body parser
+- node-fetch
+- express
+- jest
+- dotenv
+- Babel
+- cors
+- css-loader
+- sass
+- sass-loader
+- jsdom
