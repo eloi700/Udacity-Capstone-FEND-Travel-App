@@ -1,13 +1,13 @@
 # **Travel Planner**
 
 ## Introduction
-Travel Planner App is the Capstone Project for Front-End Developer.  And in order to get a certificate, one must have to accomplish of course, from the beginning to end.  Struggles on this project are really promising.  It helps me a lot as a novice programmer.  It develops my skills, knowledge, understanding as well as patience.  Strive more to keep kicking . . . Furthermore, I encourage you to soar high or go beyond in every project you love to do.
+Travel Planner App is the Capstone Project for Front-End Developer.  Struggles on this project are really promising and .  It helps me a lot as a novice programmer.  It develops my skills, knowledge, understanding as well as patience.  Read, check, research & test more to stay alive and keep kicking . . . :) Furthermore, I encourage you to soar high or go beyond in every project you love to do and STAY motivated all the time.
 
->Asynchronous Programming. "Who can wait quietly while the mud settles?  Who can remain still until the moment of action?" - Laozi, Tao Te Ching.
+>This quote from Laozi, Tao Te Ching states like Asynchronous Programming and a programmer itself. "Who can wait quietly while the mud settles?  Who can remain still until the moment of action?".
 
-Patience is the key for everything on this project.  It is not the ability to wait but to calm down no matter what happens, continue doing the action, push until the right time comes, it is worth to wait.
+>Patience is the key for everything on this project.  It is not the ability to wait but to calm down no matter what happens, continue doing the action, push and push . . . until YES GOT IT.
 
-As like the other travel app, this shows you a form where you can enter the place of your trip and check for the travel & return date.  Details will be shown to you the popular image of the city as well as the weather forecast on your travel.  For your future reference, you can save it otherwise delete.
+As like the other travel app, this shows you a form where you can enter the place of your trip and check for the travel & return date.  Details will be shown the popular image of the city as well as the weather forecast of your travel.  For future reference, you can **save** it otherwise **delete**.
 
 ## The Details  . . .
 **What makes up the whole project?**
