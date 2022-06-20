@@ -101,3 +101,14 @@ __test__ folder, dataHandlerTest.spec.js, setInfoTest.spec.js
 ```
 npm run test
 ```
+
+## The test . . .
+
+First test made for the app (setInfo).
+This is about testing if all the travel details required will be settled in the travel details card correctly.
+
+
+
+
+
+Second test made for the server (dataHandlers).
