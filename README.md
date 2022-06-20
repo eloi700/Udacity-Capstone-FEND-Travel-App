@@ -1,7 +1,7 @@
 # **Travel Planner**
 
 ## Introduction
-Travel Planner App is Udacity Capstone Project for Front-End Developer.Struggles on this project are really promising and .  It helps me a lot as a novice programmer.  It develops my skills, knowledge, understanding as well as patience.  Read, check, research & test more to stay alive and keep kicking . . . :) Furthermore, I encourage you to soar high or go beyond in every project you love to do and STAY motivated all the time.
+Travel Planner App is Udacity Capstone Project for Front-End Developer. Struggles on this project are really promising.  It helps me a lot as a novice programmer.  It develops my skills, knowledge, understanding as well as patience.  Read, check, research & test more to stay alive and keep kicking . . . :) Furthermore, I encourage you to soar high or go beyond in every project you love to do and STAY motivated all the time.
 
 >This quote from Laozi, Tao Te Ching states like Asynchronous Programming and a programmer itself. "Who can wait quietly while the mud settles?  Who can remain still until the moment of action?".
 
