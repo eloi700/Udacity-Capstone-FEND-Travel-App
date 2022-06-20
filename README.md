@@ -29,5 +29,5 @@ As like the other travel app, this shows you a form where you can enter the plac
 ## The preview . . .
 
 
-!<video src = "../media/img-video/app-preview-n.mp4" controls ="controls" style = "max-width: 730px;"></video>
+<video src = "../media/img-video/app-preview-n.mp4" controls ="controls" style = "max-width: 730px;"></video>
 
