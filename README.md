@@ -109,6 +109,6 @@ One is made for the app/client part (setInfo) and the other one is for the serve
 
 ## The Deployment . . .
 Although, it was not part of this project, I deployed this project for website/app visualization in Heroku. 
-Heroku website:  https://id.heroku.com/
+Heroku website:  https://heroku.com/
 
 
