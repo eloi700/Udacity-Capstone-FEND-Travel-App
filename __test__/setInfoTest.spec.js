@@ -4,6 +4,8 @@
 
 //simulator of the browser / dom (jsdom)
 
+
+
 import { setInfo } from "../src/client/js/setInfo";
 
 describe("check travel details", () => {
