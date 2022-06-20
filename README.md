@@ -27,9 +27,9 @@ As like the other travel app, this shows you a form where you can enter the plac
 - Note: If the location / city is unknown or the Pixabay doesn't have known image for it, trip details card will be still shown however, image will be empty. Also, it will throw an error if the one entered wrong city name.
 
 ## The preview . . .
-
-
-
+![request-form](https://user-images.githubusercontent.com/67271950/174588085-d69790ed-d082-4b30-8987-889229849081.png)
 
 https://user-images.githubusercontent.com/67271950/174584154-91aa7dec-a6e4-4b4d-87eb-7df6c03a2815.mp4
+
+![trvl-wetr-details](https://user-images.githubusercontent.com/67271950/174588038-16cdd313-81d3-42f3-ba82-c602a6e68e61.png)
 
