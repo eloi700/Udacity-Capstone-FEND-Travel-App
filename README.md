@@ -84,12 +84,12 @@ app.js, index.js etc.
 
 5. Setup the development server (build-dev) and build files for production (build-prod).
 ```
-npm run build-dev and npm run build-prod
+webpack.dev.js, webpack.prod.js
 ```
 
-6. Start the server.
+6. Check for the development, production and start the server.
 ```
-npm run start
+npm run build-dev, npm run build-prod and npm run start
 ```
 
 7. Add unit test for both app and server using Jest.
@@ -102,13 +102,13 @@ __test__ folder, dataHandlerTest.spec.js, setInfoTest.spec.js
 npm run test
 ```
 
-## The test . . .
+## The testing . . .
 
-First test made for the app (setInfo).
-This is about testing if all the travel details required will be settled in the travel details card correctly.
+One is made for the app/client part (setInfo) and the other one is for the server part (dataHandlers).
+![test_jest](https://user-images.githubusercontent.com/67271950/174622205-8ff04012-5bfa-4127-822e-22334685e153.png)
+
+## The Deployment . . .
+Although, it was not part of this project, I deployed this project for website/app visualization in Heroku. 
+Heroku website:  https://heroku.com/
 
 
-
-
-
-Second test made for the server (dataHandlers).
