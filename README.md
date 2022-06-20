@@ -33,7 +33,7 @@ https://user-images.githubusercontent.com/67271950/174584154-91aa7dec-a6e4-4b4d-
 
 ![trvl-wetr-details](https://user-images.githubusercontent.com/67271950/174588038-16cdd313-81d3-42f3-ba82-c602a6e68e61.png)
 
-## Dependencies / DevDependencies
+## Modules & Packages
 These are the modules / packages installed through npm.
 
 - webpack - a module bundler to bundle JavaScript files for usage in a browser
@@ -60,7 +60,7 @@ The following software intermediary were used:
 
 **3. Pixabay API** - a RESTful interface used to search and retrieve free and popular city images.  Though some of the cities known images are not available, still the rest of the details of the trip will be shown in the card.
 
-## How the project built?
+## Building Instructions
 
 1. Clone the previous project *(Weather App Project No. 3)*
 ```
@@ -69,35 +69,35 @@ git clone https://github.com/eloi700/Udacity-Proj-3-FEND-Weather-App.git
 
 2. Install additional dependencies / devDependencies.
 ```
-git clone https://github.com/eloi700/Udacity-Proj-3-FEND-Weather-App.git
+see above modules and packages part
 ```
 
 3. Build the framework (HTML & CSS).
 ```
-git clone https://github.com/eloi700/Udacity-Proj-3-FEND-Weather-App.git
+html framework and sass for the stylesheet
 ```
 
 4. Add other functionalities (JavaScript on both client and server side).
 ```
-git clone https://github.com/eloi700/Udacity-Proj-3-FEND-Weather-App.git
+app.js, index.js etc.
 ```
 
 5. Setup the development server (build-dev) and build files for production (build-prod).
 ```
-git clone https://github.com/eloi700/Udacity-Proj-3-FEND-Weather-App.git
+npm run build-dev and npm run build-prod
 ```
 
 6. Start the server.
 ```
-git clone https://github.com/eloi700/Udacity-Proj-3-FEND-Weather-App.git
+npm run start
 ```
 
 7. Add unit test for both app and server using Jest.
 ```
-git clone https://github.com/eloi700/Udacity-Proj-3-FEND-Weather-App.git
+__test__ folder, dataHandlerTest.spec.js, setInfoTest.spec.js
 ```
 
 8. Perform the test.
 ```
-git clone https://github.com/eloi700/Udacity-Proj-3-FEND-Weather-App.git
+npm run test
 ```
