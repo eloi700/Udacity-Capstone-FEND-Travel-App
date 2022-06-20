@@ -1,4 +1,4 @@
-# **walkabout Travel Planner**
+# <center><ins>**walkabout**</ins> Travel Planner**</center>
 
 ## Introduction
 Travel Planner App is Udacity Capstone Project for Front-End Developer. Struggles on this project are really promising.  It helps me a lot as a novice programmer.  It develops my skills, knowledge, understanding as well as patience.  Read, check, research & test more to stay alive and keep kicking . . . 😄 Furthermore, I encourage you to love what you do and STAY motivated all the time.
