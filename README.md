@@ -1,4 +1,6 @@
-# <ins>**walkabout**</ins> **Travel Planner**
+# _**walkabout**_ **Travel Planner**
+
+https://travellersapp.herokuapp.com/
 
 ## Introduction
 Travel Planner App is Udacity Capstone Project for Front-End Developer. Struggles on this project are really promising.  It helps me a lot as a novice programmer.  It develops my skills, knowledge, understanding as well as patience.  Read, check, research & test more to stay alive and keep kicking . . . 😄 Furthermore, I encourage you to love what you do and STAY motivated all the time.
@@ -108,7 +110,7 @@ One is made for the app/client part (setInfo) and the other one is for the serve
 ![test_jest](https://user-images.githubusercontent.com/67271950/174622205-8ff04012-5bfa-4127-822e-22334685e153.png)
 
 ## The Deployment . . .
-Although, it was not part of this project, I deployed this project for website/app visualization in Heroku. 
+For better visualization, I deployed this project in Heroku. 
 Heroku website:  https://heroku.com/
-
+walkabout Travel App like: https://travellersapp.herokuapp.com/
 
