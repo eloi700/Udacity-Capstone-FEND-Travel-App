@@ -1,4 +1,4 @@
-# <ins>**walkabout**</ins> Travel Planner**
+# <ins>**walkabout**</ins>Travel Planner
 
 ## Introduction
 Travel Planner App is Udacity Capstone Project for Front-End Developer. Struggles on this project are really promising.  It helps me a lot as a novice programmer.  It develops my skills, knowledge, understanding as well as patience.  Read, check, research & test more to stay alive and keep kicking . . . 😄 Furthermore, I encourage you to love what you do and STAY motivated all the time.
@@ -34,7 +34,7 @@ https://user-images.githubusercontent.com/67271950/174584154-91aa7dec-a6e4-4b4d-
 ![trvl-wetr-details](https://user-images.githubusercontent.com/67271950/174588038-16cdd313-81d3-42f3-ba82-c602a6e68e61.png)
 
 ## Dependencies / DevDependencies
-These are the modules / packages installed through npm (if some not mentioned, please check on the package.json)
+These are the modules / packages installed through npm.
 - webpack
 - webpack-plugin
 - webpack-dev-server
@@ -53,6 +53,8 @@ These are the modules / packages installed through npm (if some not mentioned, p
 
 ## APIs (Application Programming Interface)
 The following software intermediary were used:
-**1. Geonames API** - a geographical database used to locate the specified city and via latitude and longtide, pull it's respective country via
+**1. Geonames API** - a geographical database used to locate the specified city and via latitude and longtide, pull it's respective country.
+
 **2. WeatherBit API** - a weather information or database used to pull the city place weather temperature, icon(code) and it's description.
+
 **3. Pixabay API** - a RESTful interface used to search and retrieve free and popular city images.  Though some of the cities known images are not available, still the rest of the details of the trip will be shown in the card.
