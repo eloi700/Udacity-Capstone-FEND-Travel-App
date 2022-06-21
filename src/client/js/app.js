@@ -14,7 +14,6 @@ const saveButton = document.querySelector(".save");
 
 function run() {
   const today = new Date();
-  const oneDay = 86400000;
   const month = `${today.getMonth() + 1}`.padStart(2, "0");
   const minDate = `${today.getFullYear()}-${month}-${today.getDate()}`;
   startDateTrip.min = minDate;
@@ -41,14 +40,9 @@ function run() {
 
       // days countdown
       let dayStartText = formData.get("start-date");
-      const newStartDate = new Date(dayStartText);
-      const daysDiff = Math.ceil(
-        (newStartDate.getTime() - today.getTime()) / oneDay
-      );
-      const daysLeft = document.getElementById("trip-countdown-days");
-      daysLeft.textContent = daysDiff;
+      setDaysLeft(dayStartText);
 
-      Client.makeRequest(formData, (data) => dataObject = data);
+      Client.makeRequest(formData, (data) => (dataObject = data));
     } else {
       destinationLoc.classList.add("used");
       startDateTrip.classList.add("used");
@@ -71,9 +65,10 @@ function run() {
     }
   });
 
-  // load trip from storage
+  // load trip details from storage
   readData();
   Client.setInfo(dataObject);
+  setDaysLeft(dataObject?.startDate);
 
   if (dataObject) {
     tripInfo.classList.add("show");
@@ -89,4 +84,18 @@ function readData() {
   }
 }
 
-window.addEventListener('load', run);
+function setDaysLeft(dayStartText) {
+  if (!dayStartText) {
+    return;
+  }
+
+  const today = new Date();
+  const oneDay = 86400000;
+  const newStartDate = new Date(dayStartText);
+  const daysDiff = Math.ceil(
+    (newStartDate.getTime() - today.getTime()) / oneDay
+  );
+  const daysLeft = document.getElementById("trip-countdown-days");
+  daysLeft.textContent = daysDiff;
+}
+window.addEventListener("load", run);
