@@ -71,7 +71,8 @@ body {
     color: $pri-color;
   }
 
-  #departure-date, #arrival-date{
+  #departure-date,
+  #arrival-date {
     font-size: 2rem;
   }
 
@@ -90,18 +91,19 @@ body {
     top: 21rem;
   }
 
-  .txt-title{
+  .txt-title {
     font-size: 2rem;
     line-height: 2rem;
     font-weight: 300;
   }
 
-  .mark-style, p {
+  .mark-style,
+  p {
     font-size: 1.8rem;
     font-weight: 300;
   }
 
-  #search{
+  #search {
     margin-top: 3rem;
   }
 
@@ -118,18 +120,168 @@ body {
     font-weight: 500;
   }
 
-  .temp, .desc{
+  .temp,
+  .desc {
     position: relative;
     font-size: 2rem;
     top: -1rem;
   }
 
-  .temp{
+  .temp {
     letter-spacing: 0.2rem;
   }
 
   img.icon {
-   height: 7rem;
-   width: 7rem;
+    height: 7rem;
+    width: 7rem;
+  }
+}
+
+@media screen and (max-height: 480), screen and (max-width: 320px) {
+  .main-container{
+    height: 48rem;
+  }
+
+  .logo-name {
+    font-size: 4rem;
+    top: 0.5rem;
+  }
+
+  .main
+
+  // form-request
+  .title-form {
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+    top: 8.5rem;
+    word-spacing: 0.3rem;
+    line-height: 3rem;
+  }
+
+  #search-form,
+  #travel-info {
+    height: 28rem;
+    width: 25rem;
+
+    &::before,
+    &::after {
+      content: "";
+      height: 4rem;
+      width: 4rem;
+      border-width: 0.3rem;
+    }
+
+    &::after{
+      left: 21rem;
+    }
+
+    .title-name {
+      font-size: 1.5rem;
+      font-weight: 300;
+      line-height: 1;
+      padding: 0.3rem;
+    }
+
+    input::placeholder,
+    input:focus {
+      font-size: 1.3rem;
+    }
+
+    label {
+      padding-bottom: 1rem;
+    }
+
+    input {
+      font-size: 1.3rem;
+      height: 3rem;
+      width: 15rem;
+    }
+
+    .btn {
+      border-radius: 0.5rem;
+      margin-top: 1.5rem;
+      font-size: 1.3rem;
+      padding: 0.2rem 1.5rem;
+    }
+
+    // travel details / info
+
+    .location-img-pixabay {
+      top: 0.5rem;
+      left: 0.2rem;
+      height: 12rem;
+    }
+
+    .loc-img {
+      width: 25rem;
+      height: 12rem;
+      padding: 0.8rem;
+      border-radius: 0.5rem;
+    }
+
+    #travel-text-details {
+      top: 12rem;
+    }
+
+    .txt-title, .mark-style{
+      font-size: 1.2rem;
+    }
+
+    .save,
+    .delete {
+      padding: 0.3rem 1.8rem;
+      font-size: 1.2rem;
+      margin: -0.5rem 0.5rem;
+    }
+
+    #weather-title {
+      font-size: 1rem;
+      padding: 0.5rem 1.8rem;
+      font-weight: 800;
+    }
+
+    .temp {
+      letter-spacing: 0;
+    }
+
+    .temp,
+    .desc {
+      font-size: 1.2rem;
+      top: -1rem;
+    }
+
+    img.icon {
+      height: 3rem;
+      width: 3rem;
+    }
+  }
+
+  // footer area
+  #info-footer {
+    height: 8rem;
+  }
+
+  .social {
+    position: relative;
+    text-align: center;
+    padding: 1.5rem 0 0 0;
+
+    & > a {
+      font-size: 2rem;
+      width: 3rem;
+      height: 3rem;
+    }
+  }
+
+  ion-icon {
+    pointer-events: none;
+    color: $sec-color;
+  }
+
+  .designed, .copyright {
+    padding: 0.5rem 0 0 0;
+    font-size: 1rem;
+    line-height: 0.8rem;
+    font-weight: 300;
   }
 }

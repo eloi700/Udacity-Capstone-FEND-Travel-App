@@ -1,9 +1,9 @@
 @import "reset";
 
 #nav-header {
+  position: absolute;
   display: flex;
-  flex: left;
-  position: fixed;
+  justify-content: flex-start;
   height: 8rem;
   width: 100%;
   top: 0;
@@ -16,7 +16,6 @@
   position: relative;
   top: -7rem;
   left: -4rem;
-  bottom: 0;
   stroke: $pri-color;
   stroke-width: 6;
   stroke-dasharray: 500;
