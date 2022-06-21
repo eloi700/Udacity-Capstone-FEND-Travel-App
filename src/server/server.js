@@ -1,6 +1,3 @@
-// Setup empty JS object to act as endpoint for all routes
-// projectData = {};
-
 // Require express etc. to run server and routes
 const express = require("express"),
   dotenv = require("dotenv"),
