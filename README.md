@@ -112,5 +112,6 @@ One is made for the app/client part (setInfo) and the other one is for the serve
 ## The Deployment . . .
 For better visualization, I deployed this project in Heroku.
 Heroku website:  https://heroku.com/
-walkabout Travel App like: https://travellersapp.herokuapp.com/
+
+walkabout Travel App link: https://travellersapp.herokuapp.com/
 
